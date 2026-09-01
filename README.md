@@ -19,7 +19,7 @@ Copier `.env.example` vers `.env.local`, puis remplacer la valeur d’exemple :
 NEXT_PUBLIC_SITE_URL=https://votre-domaine.fr
 ```
 
-`NEXT_PUBLIC_SITE_URL` doit contenir l’origine publique HTTPS, sans slash final. Un build de production échoue volontairement si cette variable est absente afin d’empêcher la publication d’URLs `localhost` dans les métadonnées, `robots.txt` et `sitemap.xml`.
+`NEXT_PUBLIC_SITE_URL` doit contenir l’origine publique HTTPS, sans slash final. Sur Vercel, le site utilise automatiquement `VERCEL_PROJECT_PRODUCTION_URL`, puis `VERCEL_URL` si aucun domaine explicite n’est encore configuré. Sur les autres plateformes, un build de production échoue si aucune URL publique HTTPS n’est disponible afin d’empêcher la publication d’URLs `localhost` dans les métadonnées, `robots.txt` et `sitemap.xml`.
 
 ## Validation
 
