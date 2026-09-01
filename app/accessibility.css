@@ -1,0 +1,31 @@
+:where(a, button):focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.section-link a,
+.text-link,
+.footer-socials a,
+.phone-link,
+.shop-phone {
+  min-height: 44px;
+  align-items: center;
+}
+
+@media (max-width: 340px) {
+  .mobile-cta {
+    gap: 0.25rem;
+    padding-inline: 0.35rem;
+  }
+
+  .mobile-cta .button {
+    min-width: 0;
+    padding-inline: 0.25rem;
+    font-size: 0.68rem;
+  }
+
+  .mobile-cta .button svg {
+    width: 15px;
+    height: 15px;
+  }
+}
