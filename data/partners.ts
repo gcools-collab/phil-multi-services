@@ -1,0 +1,2 @@
+export type PartnerReference = { name: string; equipment: string };
+export const partners: PartnerReference[] = [{ name: "O poil près", equipment: "Aspirateur professionnel" }, { name: "Maisons Lorthioir", equipment: "Trancheuse à charcuterie" }, { name: "Ô Saint Martin", equipment: "Sèche-linge" }, { name: "Le Parvis Gourmand", equipment: "Équipement frigorifique" }, { name: "Les Caves de l’Abbaye", equipment: "Lave-verres" }];

@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { Container } from "@/components/ui/container";
+import { PageHero } from "@/components/ui/page-hero";
+export const metadata: Metadata = { title: "À propos", description: "Découvrez Phil Multi-Services, artisan de proximité à Saint-Amand-les-Eaux." };
+export default function AboutPage() { return <><PageHero eyebrow="À propos" title="Ici, vous parlez directement à Phil" description="Une présence locale, un échange accessible et des conseils adaptés à votre situation." /><section className="section section-light"><Container><div className="content-grid"><article className="content-card"><h2>Un artisan de proximité</h2><p>Phil Multi-Services accompagne les habitants et les professionnels de Saint-Amand-les-Eaux pour leurs besoins en électroménager et en matériel.</p></article><article className="content-card"><h2>Une relation simple</h2><p>Pas de parcours compliqué&nbsp;: vous expliquez votre besoin directement à Phil, qui vous conseille sur la suite à donner.</p></article></div></Container></section></>; }
