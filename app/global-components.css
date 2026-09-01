@@ -1,0 +1,2 @@
+.footer-socials{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.2rem}.footer-socials a{display:inline-flex;align-items:center;gap:.4rem;color:#c7d7e3;font-size:.9rem;font-weight:700}.footer-socials a:hover{color:white}.button-whatsapp{background:#15803d;color:white}.button-whatsapp:hover{background:#166534}
+@media(max-width:600px){body{padding-bottom:calc(4.7rem + env(safe-area-inset-bottom))}.mobile-cta{grid-template-columns:repeat(3,1fr);gap:.4rem}.mobile-cta .button{padding-inline:.4rem;font-size:.75rem;gap:.3rem}}

@@ -11,6 +11,10 @@ export const business = {
   phoneHref: "tel:+33757672662",
   whatsapp: "07 57 67 26 62",
   whatsappHref: "https://wa.me/33757672662",
+  googleMapsUrl: "https://share.google/s6czlcPkd0Mel5wmd",
+  googleMapsEmbedUrl: null as string | null,
+  googleReviewUrl: null as string | null,
+  googlePlaceId: null as string | null,
   email: null as string | null,
   socialLinks: {
     facebook: "https://www.facebook.com/p/Phil-Multi-Services-61582236816138/",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CustomerTypes } from "@/components/home/customer-types";
 import { FinalCta } from "@/components/home/final-cta";
-import { GoogleReviewsPlaceholder } from "@/components/home/google-reviews-placeholder";
+import { GoogleReviews } from "@/components/home/google-reviews";
 import { Hero } from "@/components/home/hero";
 import { LocalReferences } from "@/components/home/local-references";
 import { PhilIntroduction } from "@/components/home/phil-introduction";
@@ -34,7 +34,7 @@ export default function Home() {
       <LocalReferences />
       <RepairProcess />
       <ShopInformation />
-      <GoogleReviewsPlaceholder />
+      <GoogleReviews />
       <FinalCta />
     </>
   );

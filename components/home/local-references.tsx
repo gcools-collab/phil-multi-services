@@ -1,8 +1,8 @@
-import { Building2 } from "lucide-react";
+import { ArrowUpRight, Building2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { partners } from "@/data/partners";
 
 export function LocalReferences() {
-  return <section className="section section-light"><Container><SectionHeading eyebrow="Références professionnelles" title="Les professionnels du coin font aussi appel à Phil." description="Quelques exemples d’équipements professionnels sur lesquels Phil est intervenu." /><div className="reference-list">{partners.map((partner) => <article className="reference-item" key={partner.name}><Building2 size={20} aria-hidden="true" /><div><h3>{partner.name}</h3><p>{partner.equipment}</p></div></article>)}</div><p className="reference-note">Exemples d’interventions communiqués par Phil Multi-Services — sans témoignage ni partenariat commercial affiché.</p></Container></section>;
+  return <section className="section section-light"><Container><SectionHeading eyebrow="Références professionnelles" title="Des commerces locaux nous font confiance." description="Quelques exemples d’interventions réalisées sur des équipements professionnels." /><div className="reference-list">{partners.map((partner) => <a className="reference-link" href={partner.url} target="_blank" rel="noopener noreferrer" key={partner.name} aria-label={`${partner.name} — ouvrir le site dans un nouvel onglet`}><article className="reference-item"><div className="reference-icon"><Building2 size={20} aria-hidden="true" /></div><ArrowUpRight className="reference-arrow" size={17} aria-hidden="true" /><h3>{partner.name}</h3><p className="reference-profession">{partner.profession}</p><p className="reference-intervention"><strong>Intervention&nbsp;:</strong> {partner.intervention}</p></article></a>)}</div><p className="reference-note">Exemples d’interventions communiqués par Phil Multi-Services — sans témoignage ni partenariat commercial affiché.</p></Container></section>;
 }
