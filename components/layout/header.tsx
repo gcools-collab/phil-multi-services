@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/button";
@@ -35,7 +36,7 @@ export function Header() {
     <header className="site-header">
       <Container className="header-inner">
         <Link className="brand" href="/" aria-label="Phil Multi-Services, accueil" onClick={closeMenu}>
-          <span className="brand-mark" aria-hidden="true">PM</span>
+          <Image className="brand-avatar" src="/branding/phil-avatar.png" width={48} height={48} alt="" />
           <span className="brand-text">Phil Multi-Services<small>Saint-Amand-les-Eaux</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Navigation principale">

@@ -15,7 +15,8 @@ export const business = {
   googleMapsEmbedUrl: null as string | null,
   googleReviewUrl: null as string | null,
   googlePlaceId: "ChIJLRdN7jTpwkcRXjmwdwMzmfk",
-  email: null as string | null,
+  email: "contact@philmultiservices59.fr",
+  emailHref: "mailto:contact@philmultiservices59.fr",
   socialLinks: {
     facebook: "https://www.facebook.com/p/Phil-Multi-Services-61582236816138/",
     instagram: null,
