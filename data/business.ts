@@ -14,7 +14,7 @@ export const business = {
   googleMapsUrl: "https://share.google/s6czlcPkd0Mel5wmd",
   googleMapsEmbedUrl: null as string | null,
   googleReviewUrl: null as string | null,
-  googlePlaceId: null as string | null,
+  googlePlaceId: "ChIJLRdN7jTpwkcRXjmwdwMzmfk",
   email: null as string | null,
   socialLinks: {
     facebook: "https://www.facebook.com/p/Phil-Multi-Services-61582236816138/",
@@ -34,6 +34,6 @@ export const business = {
     { day: "jeudi", shop: "09:00–17:00" },
     { day: "vendredi", shop: "09:00–17:00" },
     { day: "samedi", shop: "09:00–17:00" },
-    { day: "dimanche", shop: "09:00–17:00" },
+    { day: "dimanche", shop: "09:00–12:00 · après-midi fermé" },
   ] satisfies BusinessHours[],
 } as const;
