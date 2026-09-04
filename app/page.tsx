@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CustomerTypes } from "@/components/home/customer-types";
+import { CommunityPartners } from "@/components/home/community-partners";
 import { FinalCta } from "@/components/home/final-cta";
 import { GoogleReviews } from "@/components/home/google-reviews";
 import { Hero } from "@/components/home/hero";
@@ -32,6 +33,7 @@ export default function Home() {
       <PhilIntroduction />
       <CustomerTypes />
       <LocalReferences />
+      <CommunityPartners />
       <RepairProcess />
       <ShopInformation />
       <GoogleReviews />
