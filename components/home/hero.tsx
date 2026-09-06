@@ -32,7 +32,7 @@ export function Hero() {
           <figcaption className="photo-caption">
             <ShieldCheck size={20} aria-hidden="true" />
             <span>
-              <strong>Phil, votre interlocuteur direct</strong>
+              <strong>Philippe, votre interlocuteur direct</strong>
               Saint-Amand-les-Eaux
             </span>
           </figcaption>

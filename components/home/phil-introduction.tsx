@@ -9,11 +9,11 @@ export function PhilIntroduction() {
     <section className="section phil-section">
       <Container className="phil-grid">
         <div className="phil-copy">
-          <p className="eyebrow">Phil, tout simplement</p>
-          <h2>Ici, vous parlez directement à Phil.</h2>
+          <p className="eyebrow">Philippe, tout simplement</p>
+          <h2>Ici, vous parlez directement à Philippe.</h2>
           <p className="large-copy">J’écoute votre besoin, je vous conseille et je cherche la solution la plus adaptée à votre situation.</p>
           <p>Un contact simple et local, que vous soyez particulier ou professionnel.</p>
-          <Link className="text-link" href="/a-propos">En savoir plus sur Phil <ArrowRight size={17} aria-hidden="true" /></Link>
+          <Link className="text-link" href="/a-propos">En savoir plus sur Philippe <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
         <div className="phil-photo-wrap">
           <PhotoFrame
@@ -25,7 +25,7 @@ export function PhilIntroduction() {
             <figcaption className="photo-caption">
               <MessageCircle size={20} aria-hidden="true" />
               <span>
-                <strong>Derrière Phil Multi-Services, il y a Phil.</strong>
+                <strong>Derrière Phil Multi-Services, il y a Philippe.</strong>
                 Votre artisan à Saint-Amand-les-Eaux
               </span>
             </figcaption>

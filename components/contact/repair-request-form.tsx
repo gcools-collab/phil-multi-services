@@ -66,8 +66,8 @@ export function RepairRequestForm() {
         <p className="form-required"><span aria-hidden="true">*</span> Champs obligatoires</p>
       </div>
       <div className="form-feedback" aria-live="polite">
-        {status === "success" && <p className="form-success"><CheckCircle2 size={20} aria-hidden="true" />Votre demande a bien été envoyée. Un e-mail de confirmation vient de vous être adressé et Phil vous recontactera dès que possible.</p>}
-        {status === "success-no-confirmation" && <p className="form-success"><CheckCircle2 size={20} aria-hidden="true" />Votre demande a bien été envoyée à Phil. L’e-mail de confirmation n’a toutefois pas pu être délivré.</p>}
+        {status === "success" && <p className="form-success"><CheckCircle2 size={20} aria-hidden="true" />Votre demande a bien été envoyée. Un e-mail de confirmation vient de vous être adressé et Philippe vous recontactera dès que possible.</p>}
+        {status === "success-no-confirmation" && <p className="form-success"><CheckCircle2 size={20} aria-hidden="true" />Votre demande a bien été envoyée à Philippe. L’e-mail de confirmation n’a toutefois pas pu être délivré.</p>}
         {status === "error" && <p className="form-error">L’envoi n’a pas abouti. Vous pouvez écrire directement à <a href={business.emailHref}>{business.email}</a> ou appeler Phil.</p>}
       </div>
     </form>

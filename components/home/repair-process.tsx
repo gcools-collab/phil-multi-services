@@ -14,7 +14,7 @@ export function RepairProcess() {
           <SectionHeading
             eyebrow="Comment ça se passe ?"
             title="On commence par en parler simplement."
-            description="Chaque situation est différente. Ces étapes permettent à Phil de comprendre le besoin et d’étudier la solution possible."
+            description="Chaque situation est différente. Ces étapes permettent à Philippe de comprendre le besoin et d’étudier la solution possible."
           />
         </div>
         <PhotoFrame
@@ -26,7 +26,7 @@ export function RepairProcess() {
           <figcaption className="photo-caption">
             <Wrench size={20} aria-hidden="true" />
             <span>
-              <strong>Phil, au travail</strong>
+              <strong>Philippe, au travail</strong>
               Dans l’atelier de Saint-Amand-les-Eaux
             </span>
           </figcaption>

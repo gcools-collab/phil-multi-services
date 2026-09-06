@@ -22,6 +22,7 @@
 .phil-photo-wrap:before{content:"";position:absolute;z-index:0;inset:1.15rem -0.85rem -0.85rem 1.15rem;border-radius:var(--radius-lg);background:var(--color-gold)}
 .phil-photo{position:relative;z-index:1;aspect-ratio:4/5;border:1px solid var(--color-line);background:var(--color-paper);box-shadow:var(--shadow-soft)}
 .phil-photo img{object-position:center 18%}
+.about-photo img{object-position:center 16%}
 
 .process-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(18rem,.7fr);grid-template-areas:"heading photo" "body photo";gap:0 clamp(2rem,5vw,4.5rem);align-items:start}
 .process-heading{grid-area:heading}

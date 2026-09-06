@@ -13,7 +13,7 @@ export const customerTypes = [
 
 export const repairSteps = [
   { title: "Expliquez le problème", description: "Décrivez simplement l’appareil et la panne rencontrée." },
-  { title: "Partagez les informations utiles", description: "Phil vous indique les éléments utiles ou vous accueille en boutique." },
+  { title: "Partagez les informations utiles", description: "Philippe vous indique les éléments utiles ou vous accueille en boutique." },
   { title: "Étude de la situation", description: "Recherche de la solution la plus adaptée selon le matériel et le besoin." },
   { title: "Une solution selon le cas", description: "Réparation, pièce détachée ou conseil selon ce qui est possible." },
 ] as const;

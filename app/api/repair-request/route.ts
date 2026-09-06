@@ -124,7 +124,7 @@ export async function POST(request: Request) {
       `Appareil concerné : ${data.device}`,
       data.brandModel ? `Marque / modèle : ${data.brandModel}` : "",
       "",
-      "Phil étudiera les informations envoyées et vous recontactera dès que possible. Cet accusé de réception ne constitue pas encore un diagnostic ni une confirmation d’intervention.",
+      "Philippe étudiera les informations envoyées et vous recontactera dès que possible. Cet accusé de réception ne constitue pas encore un diagnostic ni une confirmation d’intervention.",
       "",
       `Pour compléter votre demande : ${business.phone} ou ${business.email}`,
       "",
