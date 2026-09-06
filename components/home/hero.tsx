@@ -1,7 +1,9 @@
 import { MapPin, Phone, ShieldCheck, Store, Users } from "lucide-react";
+import { PhotoFrame } from "@/components/ui/photo-frame";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { business } from "@/data/business";
+import { philPhotos } from "@/data/photos";
 
 export function Hero() {
   return (
@@ -20,11 +22,21 @@ export function Hero() {
             <li><Users size={18} aria-hidden="true" /><span><strong>Pour vous accompagner</strong>Particuliers & professionnels</span></li>
           </ul>
         </div>
-        {/* Remplacer ce bloc par une vraie photo ou vidéo de Philippe dans sa boutique. */}
-        <div className="media-placeholder media-placeholder-hero" role="img" aria-label="Emplacement réservé à une future photo de Phil dans sa boutique">
-          <div className="media-placeholder-mark" aria-hidden="true">PHIL</div>
-          <div className="media-placeholder-caption"><ShieldCheck size={20} aria-hidden="true" /><span><strong>Phil, votre interlocuteur direct</strong>À la boutique de Saint-Amand-les-Eaux</span></div>
-        </div>
+        <PhotoFrame
+          className="home-hero-photo"
+          src={philPhotos.hero.src}
+          alt={philPhotos.hero.alt}
+          sizes="(max-width: 900px) 100vw, 40vw"
+          priority
+        >
+          <figcaption className="photo-caption">
+            <ShieldCheck size={20} aria-hidden="true" />
+            <span>
+              <strong>Phil, votre interlocuteur direct</strong>
+              Saint-Amand-les-Eaux
+            </span>
+          </figcaption>
+        </PhotoFrame>
       </Container>
     </section>
   );
