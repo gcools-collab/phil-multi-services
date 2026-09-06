@@ -39,6 +39,7 @@ export const communityPartners: CommunityPartner[] = [
     logo: "/images/partners/ma-verte-foret.jpeg",
     links: [
       { label: "Site internet", url: "https://maverteforet.fr/", type: "website" },
+      { label: "Facebook", url: "https://www.facebook.com/share/1DYRm1rnwT/", type: "facebook" },
     ],
   },
   {
