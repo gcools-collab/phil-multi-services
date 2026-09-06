@@ -20,7 +20,7 @@ export const communityPartners: CommunityPartner[] = [
     ],
   },
   {
-    name: "Ô Studio by Justyne",
+    name: "O'Studio by Justyne",
     logo: "/images/partners/o-studio-by-justyne.png",
     links: [
       { label: "Prendre rendez-vous", url: "https://www.planity.com/ostudio-by-justyne-59230-saint-amand-les-eaux", type: "website" },
