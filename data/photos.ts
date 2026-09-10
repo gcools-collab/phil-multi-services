@@ -12,7 +12,7 @@ export const philPhotos = {
     alt: "Philippe, artisan de Phil Multi-Services, photographié à Saint-Amand-les-Eaux.",
   },
   workshop: {
-    src: "/images/phil/IMG-20260905-WA0009.jpg",
+    src: "/images/phil/IMG-20260905-WA0002.jpg",
     alt: "Philippe concentré sur une réparation dans son atelier de Saint-Amand-les-Eaux.",
   },
   repair: {
