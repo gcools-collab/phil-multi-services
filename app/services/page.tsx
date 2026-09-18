@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, ExternalLink, PackageOpen, PackageSearch, Phone, Recycle, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, PackageOpen, PackageSearch, Phone, Recycle, Wrench } from "lucide-react";
 import Link from "next/link";
+import { PoppinsRentalCta } from "@/components/rental/poppins-rental-cta";
 import { PhotoFrame } from "@/components/ui/photo-frame";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { services, type Service } from "@/data/services";
 import { business } from "@/data/business";
+import { getPoppinsQrSvg, getPoppinsRentalUrl } from "@/lib/poppins-qr";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -49,7 +51,9 @@ function ServiceVisual({ service }: { service: Service }) {
   );
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const poppinsQrSvg = await getPoppinsQrSvg();
+
   return (
     <>
       <PageHero
@@ -88,12 +92,17 @@ export default function ServicesPage() {
                   </ul>
                   {service.icon === "rental" ? <>
                     <div className="button-row">
-                      <a className="button" href={business.poppinsRentalUrl} target="_blank" rel="noopener noreferrer" aria-label="Voir le matériel disponible sur Poppins — site externe, nouvel onglet">
-                        Voir le matériel disponible <ExternalLink size={18} aria-hidden="true" />
-                      </a>
+                      <PoppinsRentalCta
+                        className="button"
+                        href={getPoppinsRentalUrl()}
+                        qrSvg={poppinsQrSvg}
+                        ariaLabel="Voir le matériel disponible sur Poppins"
+                      >
+                        Voir le matériel disponible <ArrowUpRight size={18} aria-hidden="true" />
+                      </PoppinsRentalCta>
                       <ButtonLink href={business.phoneHref} variant="secondary"><Phone size={18} aria-hidden="true" />Appeler Philippe</ButtonLink>
                     </div>
-                    <p className="rental-external-note">Vous quittez le site pour Poppins, un service externe, dans un nouvel onglet. L’application peut être nécessaire pour consulter le matériel.</p>
+                    <p className="rental-external-note">Disponible via l’application Poppins.</p>
                   </> : <ButtonLink href="/contact">
                     Parler de mon besoin <ArrowRight size={18} aria-hidden="true" />
                   </ButtonLink>}
