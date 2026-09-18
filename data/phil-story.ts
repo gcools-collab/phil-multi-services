@@ -1,7 +1,7 @@
 export const philStory = {
   title: "Réparer, c’est une histoire de famille",
   quote: "Avant de jeter, on essaie de réparer.",
-  quoteSource: "Mon grand-père",
+  quoteSource: "Une phrase qui ne m’a jamais quitté",
   grandfather: {
     id: "story-grandfather-title",
     heading: "Tout a commencé avec lui",
