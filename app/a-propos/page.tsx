@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { business } from "@/data/business";
 import { philPhotos } from "@/data/photos";
-import { philStory, philStoryArc } from "@/data/phil-story";
+import { philStory } from "@/data/phil-story";
 import "./about.css";
 
 export const metadata: Metadata = {
@@ -21,18 +21,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero eyebrow="À propos" title={philStory.title} description={closingLine} />
-
-      <nav className="story-arc-band" aria-label="Le fil de l’histoire">
-        <Container>
-          <ol className="story-arc">
-            {philStoryArc.map((chapter) => (
-              <li key={chapter.id}>
-                <a href={`#${chapter.id}`}>{chapter.arcLabel}</a>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </nav>
 
       <section className="section phil-section" aria-labelledby={philStory.grandfather.id}>
         <Container className="phil-grid">
@@ -122,7 +110,7 @@ export default function AboutPage() {
           <div className="phil-copy story-copy">
             <h2 id={philStory.path.id}>{philStory.path.heading}</h2>
             {philStory.path.paragraphs.map((paragraph) => (
-              <p key={paragraph} className={paragraph === closingLine ? "large-copy" : undefined}>
+              <p key={paragraph} className={paragraph === closingLine ? "story-closing" : undefined}>
                 {paragraph}
               </p>
             ))}
