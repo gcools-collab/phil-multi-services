@@ -1,66 +1,38 @@
-.story-arc-band {
-  padding-block: 1rem;
-  background: var(--color-paper);
-  border-bottom: 1px solid var(--color-line);
-}
-
-.story-arc {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.55rem 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.story-arc li {
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-muted);
-  font-size: 0.86rem;
-  font-weight: 750;
-}
-
-.story-arc li:not(:last-child)::after {
-  content: "";
-  width: 1.35rem;
-  height: 1px;
-  margin-inline: 0.8rem;
-  background: var(--color-gold);
-}
-
-.story-arc a {
-  color: inherit;
-}
-
-.story-arc a:hover,
-.story-arc a:focus-visible {
-  color: var(--color-ink);
-}
-
 .phil-copy.story-copy h2,
 .story-chapter h2 {
   scroll-margin-top: 6rem;
 }
 
 .phil-copy.story-copy h2 {
-  max-width: 14ch;
+  max-width: 11em;
   margin: 0 0 1.2rem;
   font-size: clamp(2.15rem, 4.4vw, 3.7rem);
   line-height: 1.05;
   letter-spacing: -0.05em;
+  text-wrap: balance;
 }
 
 .phil-copy.story-copy p {
   max-width: 40rem;
+  margin: 0;
   color: var(--color-muted);
   font-size: 1.08rem;
+}
+
+.phil-copy.story-copy p + p {
+  margin-top: 1.35rem;
 }
 
 .phil-copy.story-copy p.large-copy {
   color: var(--color-ink);
   font-size: 1.2rem;
+}
+
+.phil-copy.story-copy p.story-closing {
+  margin-top: 2.1rem;
+  color: var(--color-ink);
+  font-size: 1.14rem;
+  font-weight: 650;
 }
 
 .story-quote-band {
@@ -140,6 +112,10 @@
   margin: 0;
   color: var(--color-muted);
   font-size: 1.06rem;
+}
+
+.story-chapter p + p {
+  margin-top: 1.35rem;
 }
 
 .phil-grid.is-reversed {
