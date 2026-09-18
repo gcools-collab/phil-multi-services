@@ -11,6 +11,7 @@ export const business = {
   phoneHref: "tel:+33757672662",
   whatsapp: "07 57 67 26 62",
   whatsappHref: "https://wa.me/33757672662",
+  poppinsRentalUrl: "https://poppins.go.link/21DxY?userId=17a066fa-d551-4557-9d0d-2edc9f2d3495",
   googleMapsUrl: "https://share.google/s6czlcPkd0Mel5wmd",
   googleMapsEmbedUrl: null as string | null,
   googleReviewUrl: null as string | null,

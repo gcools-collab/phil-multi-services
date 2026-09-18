@@ -44,12 +44,12 @@ export const services: Service[] = [
     icon: "parts",
   },
   {
-    slug: "location-materiel",
+    slug: "location",
     title: "Location de matériel",
     shortTitle: "Location",
-    shortDescription: "Du matériel pour un besoin ponctuel, en boutique.",
-    description: "Location de matériel pour un besoin ponctuel, selon les disponibilités du moment en boutique.",
-    highlights: ["Pour les particuliers", "Pour les professionnels", "Matériel selon disponibilité"],
+    shortDescription: "Le matériel de Philippe à louer via Poppins.",
+    description: "Besoin de matériel ponctuellement ? Philippe propose également du matériel à la location. Consultez les disponibilités directement sur Poppins.",
+    highlights: ["Catalogue et disponibilités sur Poppins", "Philippe reste joignable par téléphone"],
     icon: "rental",
   },
   {

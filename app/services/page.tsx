@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, PackageOpen, PackageSearch, Recycle, Wrench } from "lucide-react";
+import { ArrowRight, Check, ExternalLink, PackageOpen, PackageSearch, Phone, Recycle, Wrench } from "lucide-react";
 import Link from "next/link";
 import { PhotoFrame } from "@/components/ui/photo-frame";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { services, type Service } from "@/data/services";
+import { business } from "@/data/business";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -43,7 +44,7 @@ function ServiceVisual({ service }: { service: Service }) {
       </div>
       <p className="service-visual-kicker">Phil Multi-Services</p>
       <strong>{service.title}</strong>
-      <span>À Saint-Amand-les-Eaux</span>
+      <span>{service.icon === "rental" ? "Disponible via Poppins" : "À Saint-Amand-les-Eaux"}</span>
     </div>
   );
 }
@@ -70,6 +71,7 @@ export default function ServicesPage() {
           const Icon = icons[service.icon];
           return (
             <section className="service-detail" id={service.slug} key={service.slug}>
+              {service.icon === "rental" && <span id="location-materiel" className="rental-legacy-anchor" aria-hidden="true" />}
               <Container className="service-detail-grid">
                 <div>
                   <p className="eyebrow">Service {index + 1}</p>
@@ -84,9 +86,17 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <ButtonLink href="/contact">
+                  {service.icon === "rental" ? <>
+                    <div className="button-row">
+                      <a className="button" href={business.poppinsRentalUrl} target="_blank" rel="noopener noreferrer" aria-label="Voir le matériel disponible sur Poppins — site externe, nouvel onglet">
+                        Voir le matériel disponible <ExternalLink size={18} aria-hidden="true" />
+                      </a>
+                      <ButtonLink href={business.phoneHref} variant="secondary"><Phone size={18} aria-hidden="true" />Appeler Philippe</ButtonLink>
+                    </div>
+                    <p className="rental-external-note">Vous quittez le site pour Poppins, un service externe, dans un nouvel onglet. L’application peut être nécessaire pour consulter le matériel.</p>
+                  </> : <ButtonLink href="/contact">
                     Parler de mon besoin <ArrowRight size={18} aria-hidden="true" />
-                  </ButtonLink>
+                  </ButtonLink>}
                 </div>
                 <ServiceVisual service={service} />
               </Container>
