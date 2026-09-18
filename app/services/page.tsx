@@ -19,6 +19,7 @@ const icons = { repair: Wrench, parts: PackageSearch, rental: PackageOpen, recon
 
 function ServiceVisual({ service }: { service: Service }) {
   const Icon = icons[service.icon];
+  const caption = service.icon === "rental" ? "Disponible via Poppins" : "À Saint-Amand-les-Eaux";
 
   if (service.photo) {
     return (
@@ -41,12 +42,21 @@ function ServiceVisual({ service }: { service: Service }) {
 
   return (
     <div className="service-visual">
-      <div className="service-visual-icon">
-        <Icon size={28} aria-hidden="true" />
+      <span className="service-visual-frame" aria-hidden="true" />
+      <Icon className="service-visual-watermark" size={168} aria-hidden="true" />
+      <div className="service-visual-brand">
+        <div className="service-visual-icon">
+          <Icon size={28} aria-hidden="true" />
+        </div>
+        <p className="service-visual-kicker">Phil Multi-Services</p>
       </div>
-      <p className="service-visual-kicker">Phil Multi-Services</p>
-      <strong>{service.title}</strong>
-      <span>{service.icon === "rental" ? "Disponible via Poppins" : "À Saint-Amand-les-Eaux"}</span>
+      <div className="photo-caption">
+        <Icon size={20} aria-hidden="true" />
+        <span>
+          <strong>{service.title}</strong>
+          {caption}
+        </span>
+      </div>
     </div>
   );
 }
@@ -71,14 +81,13 @@ export default async function ServicesPage() {
         </Container>
       </nav>
       <div className="services-detail-list">
-        {services.map((service, index) => {
+        {services.map((service) => {
           const Icon = icons[service.icon];
           return (
             <section className="service-detail" id={service.slug} key={service.slug}>
               {service.icon === "rental" && <span id="location-materiel" className="rental-legacy-anchor" aria-hidden="true" />}
               <Container className="service-detail-grid">
                 <div>
-                  <p className="eyebrow">Service {index + 1}</p>
                   <Icon className="service-detail-icon" size={34} aria-hidden="true" />
                   <h2>{service.title}</h2>
                   <p className="service-detail-intro">{service.description}</p>
