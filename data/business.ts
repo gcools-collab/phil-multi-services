@@ -30,12 +30,6 @@ export const business = {
   pricing: null as string | null,
   repairLeadTimes: null as string | null,
   hours: [
-    { day: "lundi", shop: "14:00–17:00" },
+    { day: "lundi", shop: "Fermé" },
     { day: "mardi", shop: "09:00–17:00" },
-    { day: "mercredi", shop: "09:00–17:00" },
-    { day: "jeudi", shop: "09:00–17:00" },
-    { day: "vendredi", shop: "09:00–17:00" },
-    { day: "samedi", shop: "09:00–17:00" },
-    { day: "dimanche", shop: "09:00–12:00 · après-midi fermé" },
-  ] satisfies BusinessHours[],
-} as const;
+    { day: "mercredi", shop: "09:00–17
