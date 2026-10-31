@@ -29,7 +29,13 @@ export const business = {
   repairedBrands: [] as string[],
   pricing: null as string | null,
   repairLeadTimes: null as string | null,
-  hours: [
+    hours: [
     { day: "lundi", shop: "Fermé" },
     { day: "mardi", shop: "09:00–17:00" },
-    { day: "mercredi", shop: "09:00–17
+    { day: "mercredi", shop: "09:00–17:00" },
+    { day: "jeudi", shop: "09:00–17:00" },
+    { day: "vendredi", shop: "09:00–17:00" },
+    { day: "samedi", shop: "09:00–17:00" },
+    { day: "dimanche", shop: "09:00–18:00 · sans interruption" },
+  ] satisfies BusinessHours[],
+} as const;
