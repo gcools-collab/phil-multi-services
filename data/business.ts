@@ -18,18 +18,25 @@ export const business = {
   googlePlaceId: "ChIJLRdN7jTpwkcRXjmwdwMzmfk",
   email: "contact@philmultiservices59.fr",
   emailHref: "mailto:contact@philmultiservices59.fr",
+
   socialLinks: {
     facebook: "https://www.facebook.com/p/Phil-Multi-Services-61582236816138/",
     instagram: null,
     tiktok: null,
     googleBusinessProfile: null,
   } as Record<string, string | null>,
-  coordinates: null as { latitude: number; longitude: number } | null,
+
+  coordinates: null as {
+    latitude: number;
+    longitude: number;
+  } | null,
+
   personalStory: null as string | null,
   repairedBrands: [] as string[],
   pricing: null as string | null,
   repairLeadTimes: null as string | null,
-    hours: [
+
+  hours: [
     { day: "lundi", shop: "Fermé" },
     { day: "mardi", shop: "09:00–17:00" },
     { day: "mercredi", shop: "09:00–17:00" },
